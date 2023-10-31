@@ -2,13 +2,43 @@
   "data": [
     {
       "id": 1,
-      "name": "Kurashiki Art Sword Museum",
+      "name": "Japanese Sword Museum",
       "city": "Tokyo",
+      "lat": 35.6986389,
+      "lng": 139.7912029,
+      "photo": "https://www.touken.or.jp/Portals/0/images/museum/img_kv04_正面玄関.jpg",
+      "notes": "Japanese swords spanning several centuries displayed in a modern museum with gardens.",
+      "url": "https://www.touken.or.jp/english/"
+    },
+    {
+      "id": 2,
+      "name": "Kurashiki Art Sword Museum",
+      "city": "Kurashiki",
       "lat": 34.577528,
       "lng": 133.8223832,
       "photo": "https://www.touken-sato.com/top-01.jpg",
       "notes": "Nothing for now",
       "url": "https://touken-sato.com"
+    },
+    {
+      "id": 3,
+      "name": "The Metropolitan Museum of Art",
+      "city": "New York",
+      "lat": 40.7794273,
+      "lng": -73.9634904,
+      "photo": "https://cdn.sanity.io/images/cctd4ker/production/73a42b4ea1644b2085acaad2896bfa4699687664-2320x920.jpg",
+      "notes": "Over 5,000 years of art from around the world.",
+      "url": "https://www.metmuseum.org/"
+    },
+    {
+      "id": 4,
+      "name": "Rijksmuseum",
+      "city": "Amsterdam",
+      "lat": 52.3599976,
+      "lng": 4.8826439,
+      "photo": "https://www.artnews.com/wp-content/uploads/2023/02/GettyImages-1215971600-copy-1.jpg",
+      "notes": "Collected Works of Taisei Yamaguchi",
+      "url": "https://www.rijksmuseum.nl/en/rijksstudio/3277561--taisei-yamaguchi/collections"
     }
   ]
 }
