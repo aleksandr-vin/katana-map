@@ -31,19 +31,16 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     let marker = new Marker({ color: "#FF0011" })
       .setLngLat([133.8223832, 34.577528])
       .addTo(this.map)
-      .setPopup(
-        new Popup()
-          .setLngLat([133.8223832, 34.577528])
-          .setHTML(`
-        <h3>Kurashiki Art Sword Museum</h3>
-        <a href="https://touken-sato.com" target="_blank">touken-sato.com</a>
-      `)
+      .setPopup(new Popup()
+        .setHTML(`
+          <h3>Kurashiki Art Sword Museum</h3>
+          <a href="https://touken-sato.com" target="_blank">touken-sato.com</a>
+        `)
       );
   }
 
   ngOnDestroy() {
     this.map?.remove();
   }
-
 
 }

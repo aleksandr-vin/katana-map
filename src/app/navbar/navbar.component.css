@@ -1,8 +1,8 @@
 .heading {
   margin: 0;
   padding: 0px;
-  background-color: black;
-  color: white;
+  background-color: #f2f4f5;
+  color: #000000;
 }
 
 .heading>h1 {
