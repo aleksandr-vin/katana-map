@@ -62,7 +62,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
             <p>
             ${item.notes}
             </p>
-            <button aria-label="Share" onclick="navigator.share({ url: '${link}' });">
+            <button aria-label="Share" onclick="navigator.share({ url: '${link}', title: '${item.name} on Katana Map', text: '${item.name} on Katana Map --- map of places, where you can see katana swords' });">
               share
             </button>
             </div>
