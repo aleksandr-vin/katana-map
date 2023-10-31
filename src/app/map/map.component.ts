@@ -81,7 +81,6 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   loadStateFromFragment() {
     let fragment = location.href.replace(/^.*[#]/, '');
     if (fragment.length > 0) {
-      console.log('Loading state from fragment', fragment);
       try {
         this.initialKatanaLocationId = parseInt(fragment);
       } catch (e) {
