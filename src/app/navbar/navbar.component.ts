@@ -3,6 +3,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatMenuModule } from '@angular/material/menu';
+
 import { KatanaService } from '../katana.service';
 import { KatanaLocation } from '../katanalocation';
 
@@ -12,7 +14,7 @@ import { KatanaLocation } from '../katanalocation';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatChipsModule],
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatChipsModule, MatMenuModule],
 })
 export class NavbarComponent {
   katanaLocationList: KatanaLocation[] = [];
