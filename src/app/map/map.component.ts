@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, inject, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { Map, MapStyle, Marker, Popup, config } from '@maptiler/sdk';
 
 import { environment } from './../../environments/environment';
 import { KatanaLocation } from '../katanalocation';
+import { KatanaService } from '../katana.service';
 
 
 @Component({
@@ -11,29 +12,19 @@ import { KatanaLocation } from '../katanalocation';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
+  katanaLocationList: KatanaLocation[] = [];
+  katanaService: KatanaService = inject(KatanaService);
   map: Map | undefined;
-
-  katanaLocations: KatanaLocation[] | undefined;
 
   @ViewChild('map')
   private mapContainer!: ElementRef<HTMLElement>;
 
+  constructor() {
+    this.katanaLocationList = this.katanaService.getAllKatanaLocations();
+  }
+
   ngOnInit(): void {
     config.apiKey = environment.maptilerApiKey;
-
-    this.katanaLocations = [
-      {
-        id: 999,
-        name: "Kurashiki Art Sword Museum",
-        city: "Tokyo",
-        lat: 34.577528,
-        lng: 133.8223832,
-        photo: "https://www.touken-sato.com/top-01.jpg",
-        notes: "Nothing for now",
-        url: "https://touken-sato.com"
-      }
-
-    ]
   }
 
   ngAfterViewInit() {
@@ -46,7 +37,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       zoom: initialState.zoom
     });
 
-    for (const item of this.katanaLocations ?? []) {
+    for (const item of this.katanaLocationList) {
       let marker = new Marker({ color: "#FF0011" })
         .setLngLat([item.lng, item.lat])
         .addTo(this.map)

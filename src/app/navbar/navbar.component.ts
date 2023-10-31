@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
+import { KatanaService } from '../katana.service';
+import { KatanaLocation } from '../katanalocation';
 
 
 @Component({
@@ -13,6 +15,13 @@ import { MatChipsModule } from '@angular/material/chips';
   imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatChipsModule],
 })
 export class NavbarComponent {
+  katanaLocationList: KatanaLocation[] = [];
+  katanaService: KatanaService = inject(KatanaService);
+
+  constructor() {
+    this.katanaLocationList = this.katanaService.getAllKatanaLocations();
+  }
+
   onShare() {
     navigator.share({ url: location.href });
   }

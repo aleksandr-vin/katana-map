@@ -1,5 +1,4 @@
 export interface KatanaLocation {
-  id: number;
   name: string;
   city?: string;
   lat: number;
