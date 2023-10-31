@@ -9,3 +9,7 @@
   padding: 3px;
   margin: 0;
 }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
