@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
@@ -35,5 +37,3 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: dist/katana-map
-      permissions:
-        contents: write
