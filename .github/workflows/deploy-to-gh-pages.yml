@@ -1,0 +1,39 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Generate environment.ts
+      run: |
+        cat <<EOF > src/environments/environment.ts
+        export const environment = {
+          maptilerApiKey: '${{ secrets.MAPTILERAPIKEY }}'
+        };
+        EOF
+
+    - name: Build
+      run: npm run build-prod
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist/katana-map
+      permissions:
+        contents: write
