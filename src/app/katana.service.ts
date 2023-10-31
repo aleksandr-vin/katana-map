@@ -16,7 +16,6 @@ export class KatanaService {
   constructor() {
     let x = katanaLocationsData as unknown as Data;
     this.katanaLocationList = x.data;
-    console.log(this.katanaLocationList);
   }
 
   getAllKatanaLocations(): KatanaLocation[] {
