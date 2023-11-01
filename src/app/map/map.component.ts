@@ -46,6 +46,11 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     });
 
     for (const item of this.katanaLocationList) {
+      let linksSection = (item.links ?? []).map((link) => `
+        <button aria-label="Link-${link.name}" onclick="window.open('${link.url}', '_blank');">
+          ${link.name}
+        </button>
+      `).join();
       let link = `${location.href}#${item.id}`
       let marker = new Marker({ color: "#FF0011" })
         .setLngLat([item.lng, item.lat])
@@ -54,17 +59,22 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
           .setMaxWidth("500px")
           .setHTML(`
             <div align="left">
-            <img src="${item.photo}" width="450px" alt="Photo of ${item.name}" />
-            <h3>
-              <a href="${item.url}" target="_blank">${item.name}</a>
-            </h3>
-            <h4>${item.city}</h4>
-            <p>
-            ${item.notes}
-            </p>
-            <button aria-label="Share" onclick="navigator.share({ url: '${link}', title: '${item.name} on Katana Map', text: '${item.name} on Katana Map --- map of places, where you can see katana swords' });">
-              share
-            </button>
+              <img src="${item.photo}" width="450px" alt="Photo of ${item.name}" />
+              <h3>
+                <a href="${item.url}" target="_blank">${item.name}</a>
+                <button aria-label="Share" onclick="navigator.share({ url: '${link}', title: '${item.name} on Katana Map', text: '${item.name} on Katana Map --- map of places, where you can see katana swords' });">
+                  share
+                </button>
+              </h3>
+              <h4>
+                ${item.city}
+              </h4>
+              <p>
+                ${item.notes}
+              </p>
+              <p>
+                ${linksSection}
+              </p>
             </div>
           `)
         );

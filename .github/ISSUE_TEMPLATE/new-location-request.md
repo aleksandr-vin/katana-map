@@ -16,3 +16,4 @@ Please add new location:
 - [ ] Photo (url of a photo with the location or it's entrance, please use sword(s) photo only if that location exhibits only this/these swords) `???`
 - [ ] Notes (any notes you want to see in the database, like recommendations how to enter) `???`
 - [ ] URL (url to the location's site, like https://touken-sato.com) `???`
+- [ ] Links (Optional links to specific swords, collections on the location or other valuable information)

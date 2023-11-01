@@ -7,4 +7,10 @@ export interface KatanaLocation {
   photo?: string;
   notes?: string;
   url: string;
+  links?: KatanaLocationLink[]
+}
+
+export interface KatanaLocationLink {
+  name: string;
+  url: string;
 }
