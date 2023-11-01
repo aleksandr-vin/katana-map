@@ -24,9 +24,11 @@ jobs:
 
     - name: Generate environment.ts
       run: |
+        COMMIT_HASH=$(git rev-parse --short HEAD)
         cat <<EOF > src/environments/environment.ts
         export const environment = {
-          maptilerApiKey: '${{ secrets.MAPTILERAPIKEY }}'
+          maptilerApiKey: '${{ secrets.MAPTILERAPIKEY }}',
+          commitHash: '$COMMIT_HASH'
         };
         EOF
 

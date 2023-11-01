@@ -9,6 +9,7 @@ import { KatanaService } from '../katana.service';
 import { KatanaLocation } from '../katanalocation';
 
 import packageJson from '../../../package.json';
+import { environment } from './../../environments/environment';
 
 @Component({
   selector: 'app-navbar',
@@ -20,7 +21,8 @@ import packageJson from '../../../package.json';
 export class NavbarComponent {
   katanaLocationList: KatanaLocation[] = [];
   katanaService: KatanaService = inject(KatanaService);
-  appVersion: string = packageJson.version;
+  commitHash: string = environment.commitHash;
+  appVersion: string = `${packageJson.version} (${environment.commitHash})`;
 
   constructor() {
     this.katanaLocationList = this.katanaService.getAllKatanaLocations();
