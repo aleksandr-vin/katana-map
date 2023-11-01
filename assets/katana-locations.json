@@ -4,8 +4,8 @@
       "id": 1,
       "name": "Japanese Sword Museum",
       "city": "Tokyo",
-      "lat": 35.6986389,
-      "lng": 139.7912029,
+      "lat": 35.6990014,
+      "lng": 139.7936025,
       "photo": "https://www.touken.or.jp/Portals/0/images/museum/img_kv04_正面玄関.jpg",
       "notes": "Japanese swords spanning several centuries displayed in a modern museum with gardens.",
       "url": "https://www.touken.or.jp/english/"
@@ -34,21 +34,43 @@
       "id": 4,
       "name": "Rijksmuseum",
       "city": "Amsterdam",
-      "lat": 52.3599976,
-      "lng": 4.8826439,
+      "lat": 52.359961,
+      "lng": 4.8851815,
       "photo": "https://www.artnews.com/wp-content/uploads/2023/02/GettyImages-1215971600-copy-1.jpg",
       "notes": "Collected Works of Taisei Yamaguchi",
-      "url": "https://www.rijksmuseum.nl/en/rijksstudio/3277561--taisei-yamaguchi/collections"
+      "url": "https://www.rijksmuseum.nl/",
+      "links": [
+        {
+          "name": "Taisei Yamaguchi",
+          "url": "https://www.rijksmuseum.nl/en/rijksstudio/3277561--taisei-yamaguchi/collections"
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Museo Stibbert",
       "city": "Firenze",
-      "lat": 43.7927544,
-      "lng": 11.2525549,
+      "lat": 43.7928822,
+      "lng": 11.2549635,
       "photo": "https://www.museostibbert.it/frontend/img/header_ridotto5.jpg",
       "notes": "Japanese Armoury",
       "url": "https://www.museostibbert.it"
+    },
+    {
+      "id": 6,
+      "name": "Tokyo National Museum",
+      "city": "Tokyo",
+      "lat": 35.7188226,
+      "lng": 139.7763666,
+      "photo": "https://www.tnm.jp/uploads/r_db/db_custom_text/20231031_top_hero_1_file.jpg",
+      "notes": "Katana from Wikipedia is here",
+      "url": "https://www.tnm.jp",
+      "links": [
+        {
+          "name": "Wikipedia katana",
+          "url": "https://emuseum.nich.go.jp/detail?langId=en&webView=null&content_base_id=100511&content_part_id=001&content_pict_id=001"
+        }
+      ]
     }
   ]
 }
