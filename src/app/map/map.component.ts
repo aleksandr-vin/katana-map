@@ -52,6 +52,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
         </button>
       `).join();
       let link = `${location.href}#${item.id}`
+      let googleMapLink = `https://www.google.com/maps/@${item.lat},${item.lng},20z`
+      let mapsLink = `maps://maps.google.com/?q=${item.lat},${item.lng}`
       let marker = new Marker({ color: "#FF0011" })
         .setLngLat([item.lng, item.lat])
         .addTo(this.map)
@@ -64,6 +66,12 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
                 <a href="${item.url}" target="_blank">${item.name}</a>
                 <button aria-label="Share" onclick="navigator.share({ url: '${link}', title: '${item.name} on Katana Map', text: '${item.name} on Katana Map --- map of places, where you can see katana swords' });">
                   share
+                </button>
+                <button aria-label="google-maps-link-${item.name}" onclick="window.open('${googleMapLink}', '_blank');">
+                  google maps
+                </button>
+                <button aria-label="maps-link-${item.name}" onclick="window.open('${mapsLink}');">
+                  open in maps
                 </button>
               </h3>
               <h4>
