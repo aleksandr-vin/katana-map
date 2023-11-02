@@ -1,4 +1,5 @@
 import { Component, inject, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Map, MapStyle, Marker, Popup, config } from '@maptiler/sdk';
 
 import { environment } from './../../environments/environment';
@@ -20,7 +21,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('map')
   private mapContainer!: ElementRef<HTMLElement>;
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
     this.katanaLocationList = this.katanaService.getAllKatanaLocations();
   }
 
@@ -85,6 +88,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
               </p>
             </div>
           `)
+          .on('open', () => {
+            this.persistInUrl(`${item.id}`);
+          })
         );
       if (this.initialKatanaLocationId == item.id) {
         marker.togglePopup();
@@ -109,5 +115,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
 
   getKatanaLocationById(id: number): KatanaLocation | undefined {
     return this.katanaLocationList.find(x => x.id === id);
+  }
+
+  persistInUrl(id: string) {
+    this.router.navigate([], { fragment: id });
   }
 }
