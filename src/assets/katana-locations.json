@@ -221,6 +221,34 @@
           "url": "https://education.asianart.org/resources/japanese-swords-trade-and-cultural-exchange/"
         }
       ]
+    },
+    {
+      "id": 15,
+      "name": "The Victoria and Albert Museum",
+      "city": "London",
+      "lat": 51.496639,
+      "lng": -0.172180,
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Victoria_%26_Albert_Museum_Entrance%2C_London%2C_UK_-_Diliff.jpg/1920px-Victoria_%26_Albert_Museum_Entrance%2C_London%2C_UK_-_Diliff.jpg",
+      "notes": "Its East Asian collections include samurai swords and armor.",
+      "url": "https://www.vam.ac.uk/",
+      "links": [
+        {
+          "name": "1300-1350",
+          "url": "https://collections.vam.ac.uk/item/O92843/sword-and-scabbard-masamune/"
+        },
+        {
+          "name": "1869",
+          "url": "https://collections.vam.ac.uk/item/O90838/sword-and-scabbard/"
+        },
+        {
+          "name": "1869",
+          "url": "https://www.vam.ac.uk/articles/samurai-japanese-arms-armour"
+        },
+        {
+          "name": "Japan room on museum map",
+          "url": "https://www.vam.ac.uk/features/digitalmap/find/room/FAC0000_49801?zoom=4&latlng=-3386.45%2C5199.950000000001"
+        }
+      ]
     }
   ]
 }
