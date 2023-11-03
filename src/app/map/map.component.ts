@@ -35,7 +35,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     config.apiKey = environment.maptilerApiKey;
-    this.loadStateFromFragment();
+    this.loadState();
   }
 
   ngAfterViewInit() {
@@ -167,14 +167,17 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.katanaLocationList.find(x => x.id === id);
   }
 
-  loadStateFromFragment() {
-    let fragment = location.href.replace(/^.*[#]/, '');
-    if (fragment.length > 0) {
-      let [l, r] = fragment.split('@');
+  loadStateFrom(state: string | null) {
+    let loaded = false;
+
+    if (state && state.length > 0) {
+      let [l, r] = state.split('@');
       try {
         this.selectedKatanaLocationId = parseInt(l);
         if (isNaN(this.selectedKatanaLocationId)) {
           this.selectedKatanaLocationId = undefined;
+        } else {
+          loaded = true;
         }
       } catch (e) {
         console.warn('location id parsing failed:', e);
@@ -189,12 +192,26 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
             }
             return n;
           });
-          this.initialLat = lat;
-          this.initialLng = lng;
-          this.initialZoom = zoom;
+          if (lat &&
+            lng &&
+            zoom) {
+            this.initialLat = lat;
+            this.initialLng = lng;
+            this.initialZoom = zoom;
+            loaded = true;
+          }
         }
       } catch (e) {
         console.warn('map settings parsing failed:', e);
+      }
+    }
+    return loaded;
+  }
+
+  loadState() {
+    if (this.loadStateFrom(location.href.replace(/^.*[#]/, '')) == false) {
+      if (this.loadStateFrom(localStorage.getItem('state'))) {
+        //this.persistInUrl({}); // recreating the fragment in url // TODO: fixme
       }
     }
   }
@@ -212,10 +229,14 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     const zoom = this.map!.getZoom();
     const mapPart = `${center.lat.toFixed(7)},${center.lng.toFixed(7)},${zoom.toFixed(1)}z`;
 
+    let fragment: string;
     if (this.selectedKatanaLocationId === undefined || this.selectedKatanaLocationId === null) {
-      this.router.navigate([], { fragment: `@${mapPart}` });
+      fragment = `@${mapPart}`;
     } else {
-      this.router.navigate([], { fragment: `${this.selectedKatanaLocationId!}@${mapPart}` });
+      fragment = `${this.selectedKatanaLocationId!}@${mapPart}`;
     }
+
+    this.router.navigate([], { fragment: fragment });
+    localStorage.setItem('state', fragment);
   }
 }
