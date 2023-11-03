@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1699029328893,
+  "timestamp": 1699029844047,
   "index": "https://aleksandr.vin/katana-map/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://aleksandr.vin/katana-map/favicon.ico",
         "https://aleksandr.vin/katana-map/index.html",
-        "https://aleksandr.vin/katana-map/main.e44f0bec60ce3e2b.js",
+        "https://aleksandr.vin/katana-map/main.d144a46f29123454.js",
         "https://aleksandr.vin/katana-map/manifest.webmanifest",
         "https://aleksandr.vin/katana-map/polyfills.d0448bb1d4b7b276.js",
         "https://aleksandr.vin/katana-map/runtime.969389cf7bc75804.js",
@@ -56,10 +56,10 @@
     "https://aleksandr.vin/katana-map/assets/icons/icon-72x72.png": "1740b2b92243f034bfcfecdc4031cc8e65052332",
     "https://aleksandr.vin/katana-map/assets/icons/icon-96x96.png": "3b3daf9e4c86d5e3c0aab793a1b083a13d3a1204",
     "https://aleksandr.vin/katana-map/assets/icons/icon.svg": "450031221d4a908a1d5499dbfa8357d697fdd390",
-    "https://aleksandr.vin/katana-map/assets/katana-locations.json": "4f215d433d600790d9886c34d5c0aeb7b59ca3ab",
+    "https://aleksandr.vin/katana-map/assets/katana-locations.json": "94390b77aa86ee212467606dbec68d87ca02876d",
     "https://aleksandr.vin/katana-map/favicon.ico": "4bf91b9924bdf277902993c4613c3f2db496b5ef",
-    "https://aleksandr.vin/katana-map/index.html": "9384cad6564815d081ba8e2891970048faea23b4",
-    "https://aleksandr.vin/katana-map/main.e44f0bec60ce3e2b.js": "1825b5b7261a7d117c8a12c84c63b47c6ad81214",
+    "https://aleksandr.vin/katana-map/index.html": "86dc2310b0853cc999798d3d4e718b14d3c1464a",
+    "https://aleksandr.vin/katana-map/main.d144a46f29123454.js": "e54091717950c53f5e34d33f96984a98229452d9",
     "https://aleksandr.vin/katana-map/manifest.webmanifest": "db715182334e859cfa1e60425aa073feecce19d7",
     "https://aleksandr.vin/katana-map/polyfills.d0448bb1d4b7b276.js": "2b0a928ffd152d44b56c1b26191a16eb68722069",
     "https://aleksandr.vin/katana-map/runtime.969389cf7bc75804.js": "b791c0dc87e4f4dbbd885c66a32883111e65a872",
