@@ -71,6 +71,220 @@
           "url": "https://emuseum.nich.go.jp/detail?langId=en&webView=null&content_base_id=100511&content_part_id=001&content_pict_id=001"
         }
       ]
+    },
+    {
+      "id": 7,
+      "name": "The British Museum",
+      "city": "London",
+      "lat": 51.5194,
+      "lng": -0.1270,
+      "photo": "https://cdn.britannica.com/12/127112-050-F4DD3B7A/British-Museum-London.jpg",
+      "notes": "Holds a variety of Japanese artifacts, including samurai swords and armor.",
+      "url": "https://www.britishmuseum.org/",
+      "links": [
+        {
+          "name": "Japan collection",
+          "url": "https://www.britishmuseum.org/collection/galleries/japan"
+        },
+        {
+          "name": "Katana, Sukenao, Edo period (not on display)",
+          "url": "https://www.britishmuseum.org/collection/object/A_1958-0730-67-a-b"
+        },
+        {
+          "name": "'British Museum katana' search on Google",
+          "url": "https://www.google.com/search?q=British+Museum+katana"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Kyoto National Museum",
+      "city": "Kyoto",
+      "lat": 34.9899705,
+      "lng": 135.7731131,
+      "photo": "https://www.kyohaku.go.jp/eng/assets/meijikotokan_pc.png",
+      "notes": "Offers a rich collection of Japanese art, including items related to the samurai.",
+      "url": "http://www.kyohaku.go.jp/eng/",
+      "links": [
+        {
+          "name": "Tachi Sword by Umetada Myoju, Momoyama Period",
+          "url": "https://www.kyohaku.go.jp/eng/collection/meihin/kin/item02/"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Samurai Museum",
+      "city": "Tokyo",
+      "lat": 35.69549292481943,
+      "lng": 139.7035425830052,
+      "photo": "https://www.samuraimuseum.jp/en/photo/about.jpg",
+      "notes": "Dedicated to the samurai culture, with many pieces of armor, weapons, and other related artifacts.",
+      "url": "https://samuraimuseum.jp/en/",
+      "links": [
+        {
+          "name": "Various experiences",
+          "url": "https://www.samuraimuseum.jp/en/experience/index.html"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "The National Museum of Japanese History",
+      "city": "Sakura",
+      "lat": 35.72448301315745,
+      "lng": 140.21913059795898,
+      "photo": "https://www.rekihaku.ac.jp/english/img/img-top-banner-home.jpg",
+      "notes": "Includes exhibits on the samurai class and their equipment.",
+      "url": "https://www.rekihaku.ac.jp/english/"
+    },
+    {
+      "id": 11,
+      "name": "Musée Guimet",
+      "city": "Paris",
+      "lat": 48.865138851614255,
+      "lng": 2.2937764931351907,
+      "photo": "https://www.unjourdeplusaparis.com/wp-content/uploads/2012/03/musee-guimet.jpg",
+      "notes": "The National Museum of Asian Arts in Paris, with a section dedicated to Japanese arms and armor.",
+      "url": "http://www.guimet.fr/en/",
+      "links": [
+        {
+          "name": "1",
+          "url": "https://www.guimet.fr/event/les-arts-martiaux-du-japon/"
+        },
+        {
+          "name": "3",
+          "url": "https://www.guimet.fr/blog/pour-les-enfants-les-armures-de-samourais/"
+        },
+        {
+          "name": "2",
+          "url": "https://www.guimet.fr/event/larc-et-le-sabre-imaginaire-guerrier-du-japon/"
+        },
+        {
+          "name": "4",
+          "url": "https://www.guimet.fr/blog/daimyo-en-armure-de-guerre-tirant-a-larc/"
+        },
+        {
+          "name": "old photo of blades",
+          "url": "https://fr.m.wikipedia.org/wiki/Fichier:Katana_blades.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Tsukamoto Sword Museum",
+      "city": "Sakura",
+      "lat": 35.7188139,
+      "lng": 140.2283056,
+      "photo": "https://www.city.sakura.lg.jp/material/images/group/36/p10-p11_06.jpg",
+      "notes": "A small private collection of Japanese Katana swords out in Chiba Prefecture in the town of Sakura. Admission is free and curators are anxious and happy to answer any questions you may have.",
+      "url": "https://www.city.sakura.lg.jp/soshiki/sakuranomiryoku/1/3036.html",
+      "links": [
+        {
+          "name": "English description on SnapJapan",
+          "url": "https://www.snapjapan.com/tsukamoto-museum"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "The Royal Armouries Museum",
+      "city": "Leeds",
+      "lat": 53.79180686229316,
+      "lng": -1.532229291999844,
+      "photo": "https://royalarmouries.org/sites/default/files/styles/11_7_media_large/public/2023-07/Royal%20Armouries%20Museum-Leeds-adjusted.jpg",
+      "notes": "This museum has a collection of Japanese arms and armor.",
+      "url": "https://www.royalarmouries.org/",
+      "links": [
+        {
+          "name": "Armour presented to King James I",
+          "url": "https://royalarmouries.org/collection/object/object-30423"
+        },
+        {
+          "name": "Katana, Masamitsu, ~1370",
+          "url": "https://royalarmouries.org/collection/object/object-36331"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "The San Francisco Asian Art Museum",
+      "city": "San Francisco",
+      "lat": 37.78029888268359,
+      "lng": -122.41615947850732,
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Terracotta_Warriors_Exhibition_San_Francisco_2013.jpg/1920px-Terracotta_Warriors_Exhibition_San_Francisco_2013.jpg",
+      "notes": "Hosts a significant collection of Asian art, including samurai swords.",
+      "url": "https://www.asianart.org/",
+      "links": [
+        {
+          "name": "Lesson (pdf)",
+          "url": "https://education.asianart.org/resources/japanese-swords-trade-and-cultural-exchange/"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "The Victoria and Albert Museum",
+      "city": "London",
+      "lat": 51.496639,
+      "lng": -0.172180,
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Victoria_%26_Albert_Museum_Entrance%2C_London%2C_UK_-_Diliff.jpg/1920px-Victoria_%26_Albert_Museum_Entrance%2C_London%2C_UK_-_Diliff.jpg",
+      "notes": "Its East Asian collections include samurai swords and armor.",
+      "url": "https://www.vam.ac.uk/",
+      "links": [
+        {
+          "name": "1300-1350",
+          "url": "https://collections.vam.ac.uk/item/O92843/sword-and-scabbard-masamune/"
+        },
+        {
+          "name": "1869",
+          "url": "https://collections.vam.ac.uk/item/O90838/sword-and-scabbard/"
+        },
+        {
+          "name": "1869",
+          "url": "https://www.vam.ac.uk/articles/samurai-japanese-arms-armour"
+        },
+        {
+          "name": "Japan room on museum map",
+          "url": "https://www.vam.ac.uk/features/digitalmap/find/room/FAC0000_49801?zoom=4&latlng=-3386.45%2C5199.950000000001"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "The Ann and Gabriel Barbier-Mueller Museum: The Samurai Collection",
+      "city": "Dallas",
+      "lat": 32.791942245763664,
+      "lng": -96.80668904812639,
+      "photo": "https://harwooddistrict.com/wp-content/uploads/2018/06/arts04.jpg",
+      "notes": "One of the largest collections of samurai armor outside of Japan.",
+      "url": "https://www.samuraicollection.org/",
+      "links": [
+        {
+          "name": "another link",
+          "url": "https://harwooddistrict.com/the-samurai-collection/"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Los Angeles County Museum of Art",
+      "city": "Los Angeles",
+      "lat": 34.063932,
+      "lng": -118.359229,
+      "photo": "https://www.lacma.org/sites/default/files/styles/desktop_header/public/basic-page/SF3092_05.jpg",
+      "notes": "Has a collection of Japanese art, including samurai swords.",
+      "url": "https://www.lacma.org/",
+      "links": [
+        {
+          "name": "Sukenaga Yokoyama",
+          "url": "https://collections.lacma.org/node/157819"
+        },
+        {
+          "name": "on public domain media",
+          "url": "https://picryl.com/topics/weapons+from+japan+in+the+los+angeles+county+museum+of+art"
+        }
+      ]
     }
   ]
 }
