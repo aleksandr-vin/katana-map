@@ -71,6 +71,30 @@
           "url": "https://emuseum.nich.go.jp/detail?langId=en&webView=null&content_base_id=100511&content_part_id=001&content_pict_id=001"
         }
       ]
+    },
+    {
+      "id": 7,
+      "name": "The British Museum",
+      "city": "London",
+      "lat": 51.5194,
+      "lng": -0.1270,
+      "photo": "https://cdn.britannica.com/12/127112-050-F4DD3B7A/British-Museum-London.jpg",
+      "notes": "Holds a variety of Japanese artifacts, including samurai swords and armor.",
+      "url": "https://www.britishmuseum.org/",
+      "links": [
+        {
+          "name": "Japan collection",
+          "url": "https://www.britishmuseum.org/collection/galleries/japan"
+        },
+        {
+          "name": "Katana, Sukenao, Edo period (not on display)",
+          "url": "https://www.britishmuseum.org/collection/object/A_1958-0730-67-a-b"
+        },
+        {
+          "name": "'British Museum katana' search on Google",
+          "url": "https://www.google.com/search?q=British+Museum+katana"
+        }
+      ]
     }
   ]
 }
