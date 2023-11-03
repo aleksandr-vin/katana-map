@@ -249,6 +249,22 @@
           "url": "https://www.vam.ac.uk/features/digitalmap/find/room/FAC0000_49801?zoom=4&latlng=-3386.45%2C5199.950000000001"
         }
       ]
+    },
+    {
+      "id": 16,
+      "name": "The Ann and Gabriel Barbier-Mueller Museum: The Samurai Collection",
+      "city": "Dallas",
+      "lat": 32.791942245763664,
+      "lng": -96.80668904812639,
+      "photo": "https://harwooddistrict.com/wp-content/uploads/2018/06/arts04.jpg",
+      "notes": "One of the largest collections of samurai armor outside of Japan.",
+      "url": "https://www.samuraicollection.org/",
+      "links": [
+        {
+          "name": "another link",
+          "url": "https://harwooddistrict.com/the-samurai-collection/"
+        }
+      ]
     }
   ]
 }
