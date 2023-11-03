@@ -95,6 +95,96 @@
           "url": "https://www.google.com/search?q=British+Museum+katana"
         }
       ]
+    },
+    {
+      "id": 8,
+      "name": "Kyoto National Museum",
+      "city": "Kyoto",
+      "lat": 34.9899705,
+      "lng": 135.7731131,
+      "photo": "https://www.kyohaku.go.jp/eng/assets/meijikotokan_pc.png",
+      "notes": "Offers a rich collection of Japanese art, including items related to the samurai.",
+      "url": "http://www.kyohaku.go.jp/eng/",
+      "links": [
+        {
+          "name": "Tachi Sword by Umetada Myoju, Momoyama Period",
+          "url": "https://www.kyohaku.go.jp/eng/collection/meihin/kin/item02/"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Samurai Museum",
+      "city": "Tokyo",
+      "lat": 35.69549292481943,
+      "lng": 139.7035425830052,
+      "photo": "https://www.samuraimuseum.jp/en/photo/about.jpg",
+      "notes": "Dedicated to the samurai culture, with many pieces of armor, weapons, and other related artifacts.",
+      "url": "https://samuraimuseum.jp/en/",
+      "links": [
+        {
+          "name": "Various experiences",
+          "url": "https://www.samuraimuseum.jp/en/experience/index.html"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "The National Museum of Japanese History",
+      "city": "Sakura",
+      "lat": 35.72448301315745,
+      "lng": 140.21913059795898,
+      "photo": "https://www.rekihaku.ac.jp/english/img/img-top-banner-home.jpg",
+      "notes": "Includes exhibits on the samurai class and their equipment.",
+      "url": "https://www.rekihaku.ac.jp/english/"
+    },
+    {
+      "id": 11,
+      "name": "Musée Guimet",
+      "city": "Paris",
+      "lat": 48.865138851614255,
+      "lng": 2.2937764931351907,
+      "photo": "https://www.unjourdeplusaparis.com/wp-content/uploads/2012/03/musee-guimet.jpg",
+      "notes": "The National Museum of Asian Arts in Paris, with a section dedicated to Japanese arms and armor.",
+      "url": "http://www.guimet.fr/en/",
+      "links": [
+        {
+          "name": "1",
+          "url": "https://www.guimet.fr/event/les-arts-martiaux-du-japon/"
+        },
+        {
+          "name": "3",
+          "url": "https://www.guimet.fr/blog/pour-les-enfants-les-armures-de-samourais/"
+        },
+        {
+          "name": "2",
+          "url": "https://www.guimet.fr/event/larc-et-le-sabre-imaginaire-guerrier-du-japon/"
+        },
+        {
+          "name": "4",
+          "url": "https://www.guimet.fr/blog/daimyo-en-armure-de-guerre-tirant-a-larc/"
+        },
+        {
+          "name": "old photo of blades",
+          "url": "https://fr.m.wikipedia.org/wiki/Fichier:Katana_blades.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Tsukamoto Sword Museum",
+      "city": "Sakura",
+      "lat": 35.7188139,
+      "lng": 140.2283056,
+      "photo": "https://www.city.sakura.lg.jp/material/images/group/36/p10-p11_06.jpg",
+      "notes": "A small private collection of Japanese Katana swords out in Chiba Prefecture in the town of Sakura. Admission is free and curators are anxious and happy to answer any questions you may have.",
+      "url": "https://www.city.sakura.lg.jp/soshiki/sakuranomiryoku/1/3036.html",
+      "links": [
+        {
+          "name": "English description on SnapJapan",
+          "url": "https://www.snapjapan.com/tsukamoto-museum"
+        }
+      ]
     }
   ]
 }
