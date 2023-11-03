@@ -185,6 +185,42 @@
           "url": "https://www.snapjapan.com/tsukamoto-museum"
         }
       ]
+    },
+    {
+      "id": 13,
+      "name": "The Royal Armouries Museum",
+      "city": "Leeds",
+      "lat": 53.79180686229316,
+      "lng": -1.532229291999844,
+      "photo": "https://royalarmouries.org/sites/default/files/styles/11_7_media_large/public/2023-07/Royal%20Armouries%20Museum-Leeds-adjusted.jpg",
+      "notes": "This museum has a collection of Japanese arms and armor.",
+      "url": "https://www.royalarmouries.org/",
+      "links": [
+        {
+          "name": "Armour presented to King James I",
+          "url": "https://royalarmouries.org/collection/object/object-30423"
+        },
+        {
+          "name": "Katana, Masamitsu, ~1370",
+          "url": "https://royalarmouries.org/collection/object/object-36331"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "The San Francisco Asian Art Museum",
+      "city": "San Francisco",
+      "lat": 37.78029888268359,
+      "lng": -122.41615947850732,
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Terracotta_Warriors_Exhibition_San_Francisco_2013.jpg/1920px-Terracotta_Warriors_Exhibition_San_Francisco_2013.jpg",
+      "notes": "Hosts a significant collection of Asian art, including samurai swords.",
+      "url": "https://www.asianart.org/",
+      "links": [
+        {
+          "name": "Lesson (pdf)",
+          "url": "https://education.asianart.org/resources/japanese-swords-trade-and-cultural-exchange/"
+        }
+      ]
     }
   ]
 }
