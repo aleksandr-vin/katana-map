@@ -285,6 +285,23 @@
           "url": "https://picryl.com/topics/weapons+from+japan+in+the+los+angeles+county+museum+of+art"
         }
       ]
+    },
+    {
+      "id": 18,
+      "name": "SieboldHuis",
+      "city": "Leiden",
+      "country": "Netherlands",
+      "lat": 52.15967645937479,
+      "lng": 4.484614921057527,
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/WLANL_-_Pachango_-_Sieboldhuis.jpg/1920px-WLANL_-_Pachango_-_Sieboldhuis.jpg",
+      "notes": "Museum dedicated to Japanese culture with various artifacts collected by Philipp Franz von Siebold, which may include items related to samurai history.",
+      "url": "http://www.sieboldhuis.org/",
+      "links": [
+        {
+          "name": "Collection",
+          "url": "http://www.sieboldhuis.org/collectie"
+        }
+      ]
     }
   ]
 }
