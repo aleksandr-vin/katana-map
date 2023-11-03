@@ -265,6 +265,26 @@
           "url": "https://harwooddistrict.com/the-samurai-collection/"
         }
       ]
+    },
+    {
+      "id": 17,
+      "name": "Los Angeles County Museum of Art",
+      "city": "Los Angeles",
+      "lat": 34.063932,
+      "lng": -118.359229,
+      "photo": "https://www.lacma.org/sites/default/files/styles/desktop_header/public/basic-page/SF3092_05.jpg",
+      "notes": "Has a collection of Japanese art, including samurai swords.",
+      "url": "https://www.lacma.org/",
+      "links": [
+        {
+          "name": "Sukenaga Yokoyama",
+          "url": "https://collections.lacma.org/node/157819"
+        },
+        {
+          "name": "on public domain media",
+          "url": "https://picryl.com/topics/weapons+from+japan+in+the+los+angeles+county+museum+of+art"
+        }
+      ]
     }
   ]
 }
