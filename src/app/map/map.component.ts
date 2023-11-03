@@ -17,7 +17,10 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   katanaLocationList: KatanaLocation[] = [];
   katanaService: KatanaService = inject(KatanaService);
   map: Map | undefined;
-  initialKatanaLocationId: number | undefined;
+  selectedKatanaLocationId?: number;
+  initialLat?: number;
+  initialLng?: number;
+  initialZoom?: number;
 
   locationZoom = 12;
 
@@ -36,9 +39,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    let initialState = { lat: 24.577528, lng: 133.8223832, zoom: 2 };
-    if (this.initialKatanaLocationId) {
-      const i = this.getKatanaLocationById(this.initialKatanaLocationId);
+    let initialState = { lat: this.initialLat ?? 24.577528, lng: this.initialLng ?? 133.8223832, zoom: this.initialZoom ?? 2 };
+    if (this.selectedKatanaLocationId) {
+      const i = this.getKatanaLocationById(this.selectedKatanaLocationId);
       if (i) {
         initialState = { lat: i.lat, lng: i.lng, zoom: this.locationZoom };
       }
@@ -49,6 +52,10 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       style: MapStyle.STREETS,
       center: [initialState.lng, initialState.lat],
       zoom: initialState.zoom
+    });
+
+    this.map.on('moveend', () => {
+      this.persistInUrl({});
     });
 
     for (const item of this.katanaLocationList) {
@@ -133,7 +140,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
               });
             }
 
-            this.persistInUrl(`${item.id}`);
+            this.persistInUrl({ id: item.id });
 
             gtag('event', 'open-popup', {
               'event_category': 'Map',
@@ -143,10 +150,10 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
             });
           })
           .on('close', () => {
-            this.persistInUrl();
+            this.persistInUrl({ id: null });
           })
         );
-      if (this.initialKatanaLocationId == item.id) {
+      if (this.selectedKatanaLocationId == item.id) {
         marker.togglePopup();
       }
     }
@@ -156,26 +163,59 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.map?.remove();
   }
 
-  loadStateFromFragment() {
-    let fragment = location.href.replace(/^.*[#]/, '');
-    if (fragment.length > 0) {
-      try {
-        this.initialKatanaLocationId = parseInt(fragment);
-      } catch (e) {
-        console.warn(e);
-      }
-    }
-  }
-
   getKatanaLocationById(id: number): KatanaLocation | undefined {
     return this.katanaLocationList.find(x => x.id === id);
   }
 
-  persistInUrl(id?: string) {
-    if (id === undefined) {
-      this.router.navigate([]);
+  loadStateFromFragment() {
+    let fragment = location.href.replace(/^.*[#]/, '');
+    if (fragment.length > 0) {
+      let [l, r] = fragment.split('@');
+      try {
+        this.selectedKatanaLocationId = parseInt(l);
+        if (isNaN(this.selectedKatanaLocationId)) {
+          this.selectedKatanaLocationId = undefined;
+        }
+      } catch (e) {
+        console.warn('location id parsing failed:', e);
+      }
+      try {
+        if (r.endsWith('z')) {
+          let xs = r.split(',');
+          let [lat, lng, zoom] = [xs[0], xs[1], xs[2].slice(0, -1)].map(s => {
+            const n = parseFloat(s);
+            if (isNaN(n)) {
+              return undefined;
+            }
+            return n;
+          });
+          this.initialLat = lat;
+          this.initialLng = lng;
+          this.initialZoom = zoom;
+        }
+      } catch (e) {
+        console.warn('map settings parsing failed:', e);
+      }
+    }
+  }
+
+  persistInUrl = (props: {
+    id?: number | null
+  }) => {
+    if (props.id === null) {
+      this.selectedKatanaLocationId = undefined;
+    } else if (props.id !== undefined) {
+      this.selectedKatanaLocationId = props.id;
+    }
+
+    const center = this.map!.getCenter();
+    const zoom = this.map!.getZoom();
+    const mapPart = `${center.lat.toFixed(7)},${center.lng.toFixed(7)},${zoom.toFixed(1)}z`;
+
+    if (this.selectedKatanaLocationId === undefined || this.selectedKatanaLocationId === null) {
+      this.router.navigate([], { fragment: `@${mapPart}` });
     } else {
-      this.router.navigate([], { fragment: id });
+      this.router.navigate([], { fragment: `${this.selectedKatanaLocationId!}@${mapPart}` });
     }
   }
 }
