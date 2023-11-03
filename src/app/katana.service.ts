@@ -3,7 +3,7 @@ import { KatanaLocation } from './katanalocation';
 
 import * as katanaLocationsData from '../assets/katana-locations.json';
 
-interface Data {
+export interface Data {
   data: KatanaLocation[]
 }
 

@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "integrity": "node check-data-integrity.js",
     "build-prod": "ng build --configuration production --base-href \"https://aleksandr.vin/katana-map/\"",
     "publish": "npx angular-cli-ghpages --dir=dist/katana-map"
   },
