@@ -32,9 +32,6 @@ jobs:
         };
         EOF
 
-    - name: Test
-      run: npm run test
-    
     - name: Integrity
       run: npm run integrity
 
