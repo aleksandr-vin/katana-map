@@ -6,6 +6,7 @@ import { environment } from './../../environments/environment';
 import { KatanaLocation } from '../katanalocation';
 import { KatanaService } from '../katana.service';
 
+declare let gtag: Function;
 
 @Component({
   selector: 'app-map',
@@ -50,7 +51,15 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
 
     for (const item of this.katanaLocationList) {
       let linksSection = (item.links ?? []).map((link) => `
-        <button aria-label="Link-${link.name}" onclick="window.open('${link.url}', '_blank');">
+        <button aria-label="Link-${link.name}" onclick="
+          gtag('event', 'item-link-click', {
+            'event_category': 'Map',
+            'event_label': 'Open Item Link',
+            'link_url': '${link.url}',
+            'location_id': '${item.id}'
+          });
+          window.open('${link.url}', '_blank');
+        ">
           ${link.name}
         </button>
       `).join();
@@ -67,13 +76,37 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
               <img src="${item.photo}" width="450px" alt="Photo of ${item.name}" />
               <h3>
                 <a href="${item.url}" target="_blank">${item.name}</a>
-                <button aria-label="Share" onclick="navigator.share({ url: '${link}', title: '${item.name} on Katana Map', text: '${item.name} on Katana Map --- map of places, where you can see katana swords' });">
+                <button aria-label="Share" onclick="
+                  gtag('event', 'share', {
+                    'event_category': 'Popup',
+                    'event_label': 'Share',
+                    'value': '${link}',
+                    'location_id': '${item.id}'
+                  });
+                  navigator.share({ url: '${link}', title: '${item.name} on Katana Map', text: '${item.name} on Katana Map --- map of places, where you can see katana swords' });
+                ">
                   share
                 </button>
-                <button aria-label="google-maps-link-${item.name}" onclick="window.open('${googleMapLink}', '_blank');">
+                <button aria-label="google-maps-link-${item.name}" onclick="
+                  gtag('event', 'google-maps-click', {
+                    'event_category': 'Map',
+                    'event_label': 'Open Google Maps Link',
+                    'link_url': '${googleMapLink}',
+                    'location_id': '${item.id}'
+                  });
+                  window.open('${googleMapLink}', '_blank');
+                ">
                   google maps
                 </button>
-                <button aria-label="maps-link-${item.name}" onclick="window.open('${mapsLink}');">
+                <button aria-label="maps-link-${item.name}" onclick="
+                  gtag('event', 'maps-click', {
+                    'event_category': 'Map',
+                    'event_label': 'Open Maps Link',
+                    'link_url': '${mapsLink}',
+                    'location_id': '${item.id}'
+                  });
+                  window.open('${mapsLink}');
+                ">
                   open in maps
                 </button>
               </h3>
@@ -90,6 +123,16 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
           `)
           .on('open', () => {
             this.persistInUrl(`${item.id}`);
+
+            gtag('event', 'open-popup', {
+              'event_category': 'Map',
+              'event_label': 'Open Popup',
+              'value': location.href,
+              'location_id': `${item.id}`
+            });
+          })
+          .on('close', () => {
+            this.persistInUrl();
           })
         );
       if (this.initialKatanaLocationId == item.id) {
@@ -117,7 +160,11 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.katanaLocationList.find(x => x.id === id);
   }
 
-  persistInUrl(id: string) {
-    this.router.navigate([], { fragment: id });
+  persistInUrl(id?: string) {
+    if (id === undefined) {
+      this.router.navigate([]);
+    } else {
+      this.router.navigate([], { fragment: id });
+    }
   }
 }

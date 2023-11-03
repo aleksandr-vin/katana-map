@@ -11,6 +11,8 @@ import { KatanaLocation } from '../katanalocation';
 import packageJson from '../../../package.json';
 import { environment } from './../../environments/environment';
 
+declare let gtag: Function;
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -29,6 +31,12 @@ export class NavbarComponent {
   }
 
   onShare() {
+    gtag('event', 'share', {
+      'event_category': 'Navbar',
+      'event_label': 'Share',
+      'value': location.href
+    });
+
     navigator.share({ url: location.href, title: 'Katana Map', text: 'Map of places, where to see katana swords' });
   }
 }
