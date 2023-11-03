@@ -19,6 +19,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   map: Map | undefined;
   initialKatanaLocationId: number | undefined;
 
+  locationZoom = 12;
+
   @ViewChild('map')
   private mapContainer!: ElementRef<HTMLElement>;
 
@@ -38,7 +40,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.initialKatanaLocationId) {
       const i = this.getKatanaLocationById(this.initialKatanaLocationId);
       if (i) {
-        initialState = { lat: i.lat, lng: i.lng, zoom: 16 };
+        initialState = { lat: i.lat, lng: i.lng, zoom: this.locationZoom };
       }
     }
 
@@ -122,6 +124,15 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
             </div>
           `)
           .on('open', () => {
+            if (this.map!.getZoom() < this.locationZoom) {
+              this.map!.flyTo({
+                center: [item.lng, item.lat],
+                zoom: this.locationZoom,
+                duration: 2000,
+                essential: true
+              });
+            }
+
             this.persistInUrl(`${item.id}`);
 
             gtag('event', 'open-popup', {
