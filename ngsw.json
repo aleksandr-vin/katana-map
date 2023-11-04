@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1699031489547,
+  "timestamp": 1699103632827,
   "index": "https://aleksandr.vin/katana-map/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://aleksandr.vin/katana-map/favicon.ico",
         "https://aleksandr.vin/katana-map/index.html",
-        "https://aleksandr.vin/katana-map/main.fdfc930c699a7c7e.js",
+        "https://aleksandr.vin/katana-map/main.b096e971d961d720.js",
         "https://aleksandr.vin/katana-map/manifest.webmanifest",
         "https://aleksandr.vin/katana-map/polyfills.d0448bb1d4b7b276.js",
         "https://aleksandr.vin/katana-map/runtime.969389cf7bc75804.js",
@@ -58,8 +58,8 @@
     "https://aleksandr.vin/katana-map/assets/icons/icon.svg": "450031221d4a908a1d5499dbfa8357d697fdd390",
     "https://aleksandr.vin/katana-map/assets/katana-locations.json": "94390b77aa86ee212467606dbec68d87ca02876d",
     "https://aleksandr.vin/katana-map/favicon.ico": "4bf91b9924bdf277902993c4613c3f2db496b5ef",
-    "https://aleksandr.vin/katana-map/index.html": "8e7329b7488fa85e55260239192e19a30f543961",
-    "https://aleksandr.vin/katana-map/main.fdfc930c699a7c7e.js": "df4c8fb5c94f2a7ce47e4001c4757350dcb7b2f8",
+    "https://aleksandr.vin/katana-map/index.html": "3525b9be58489dcb9f367f1408fc311476418964",
+    "https://aleksandr.vin/katana-map/main.b096e971d961d720.js": "aef1b2f4a3a39e464543e81c1966f8e422ad9b0f",
     "https://aleksandr.vin/katana-map/manifest.webmanifest": "db715182334e859cfa1e60425aa073feecce19d7",
     "https://aleksandr.vin/katana-map/polyfills.d0448bb1d4b7b276.js": "2b0a928ffd152d44b56c1b26191a16eb68722069",
     "https://aleksandr.vin/katana-map/runtime.969389cf7bc75804.js": "b791c0dc87e4f4dbbd885c66a32883111e65a872",
